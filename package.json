@@ -1,6 +1,6 @@
 
 {
-  "name": "shwas-iot-dust-monitor",
+  "name": "tecx-shwas-iot-dust-monitor",
   "version": "1.0.0",
   "description": "Open-Source Low-Cost Edge-IoT Dust Telemetry & Worker Safety Infrastructure",
   "main": "server.js",
@@ -16,7 +16,7 @@
     "open-source-hardware",
     "mqtt"
   ],
-  "author": "Project Shwas Engineering",
+  "author": "TecX's C.T.O.",
   "license": "MIT",
   "dependencies": {
     "express": "^4.19.2",
