@@ -119,7 +119,7 @@ jobs:
 }
 ```
 ## docker-compose.yml
-
+```
 version: '3.8'
 services:
   shwas-core-app:
@@ -148,10 +148,11 @@ services:
 volumes:
   shwas_database_volume:
     driver: local
+```
 
 ------------------------------
 ## 3. Complete Source Code Files## binary_parser.js
-
+```
 /**
  * Project Shwas — High-Density Binary Data Packet Unpacker
  * Unpacks big-endian raw radio payloads to minimize telemetry bandwidth usage.
@@ -184,9 +185,9 @@ function unpackTelemetryPacket(rawBuffer) {
 }
 
 module.exports = { unpackTelemetryPacket };
-
+```
 ## server.js
-
+```
 /**
  * Project Shwas — Ingestion Pipeline, SQLite Controller & WebSocket Hub
  */
@@ -243,7 +244,7 @@ mqttClient.on('message', (topic, messageBuffer) => {
 });
 
 server.listen(3000, () => console.log("Shwas Control Dashboard active at http://localhost:3000"));
-
+```
 ## backup_policy.sh
 
 #!/bin/sh# Project Shwas - Automated Data Backup & Retention Script
