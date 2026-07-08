@@ -49,7 +49,41 @@ shwas-iot-dust-monitor/ (Repository Root)
     ├── index.html               <-- Live Interactive Leaflet Dashboard Map
     ├── login.html               <-- Government Administrator Protection Portal
     └── factory_jig.html         <-- Assembly Line Quality Control Test Screen
- ```   
+
+```
+
+Consolidated Industrial Project Blueprint LedgerThe complete asset registry for Project Shwas is finalized, verified, and structured for scale
+
+```
+=================================================================================
+PROJECT SHWAS (श्वॉस) — MASTER DEPLOYMENT FILE INDEX MATRIX
+=================================================================================
+[📂 CORE SERVER OPERATIONS]
+ ├── package.json               -> SPDX GPL-3.0-only Build Manifest and Script Triggers
+ ├── server.js                  -> Parameterized SQLite Logging Hub & Webhook Listener
+ ├── binary_parser.js           -> 15-Byte IEEE 754 Floating-Point Telemetry Decoder
+ ├── test_suite.js              -> Automated Integration API Testing Engine Code
+ ├── backup_policy.sh           -> Daily 180-Day Database Auto-Retention Script
+ └── docker-compose.yml         -> Containerized Cloud Virtualization Sandbox Configuration
+
+[📂 EMBEDDED NODE ENVIRONMENT]
+ └── firmware/
+      └── shwas_core_firmware.ino -> ESP32 Power-Saving Core with u-blox Satellite Logic
+
+[📂 INDUSTRIAL MANUFACTURING ARTIFACTS]
+ ├── flash_secure_core.sh       -> RSA-3072 Secure Boot & AES-256 eFuse Burn Loader
+ └── hardware/
+      ├── shwas_v2.drl          -> 4-Layer Plated CNC Fabricator Mechanical Drill Map
+      ├── enclosure_spec.scad   -> OpenSCAD Labyrinth Weatherproof Housing Box Code
+      └── pick_and_place_centroid.csv -> Automated Pick-and-Place Coordinate Matrix
+
+[📂 ADMINISTRATIVE WORKSPACE]
+ ├── .github/
+ │    └── PULL_REQUEST_TEMPLATE.md -> Quality Control Production Merge Gate Check
+ └── public/
+      └── index.html            -> Live Dark-Mode Leaflet Dashboard Tracking Map UI
+=================================================================================
+```
 ## 2. Complete Configuration & Infrastructure Files## .gitignore
 
 # Dependency directories
