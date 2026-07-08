@@ -32,6 +32,24 @@ tecx-shwas-iot-dust-monitor/ (Repository Root)
     └── factory_jig.html          <-- Assembly Line Quality Control Test Screen
 ```
 ------------------------------
+```
+shwas-iot-dust-monitor/ (Repository Root)
+├── init_git_architecture.sh     <-- Automated 3-Branch Deployment Script
+├── package.json                 <-- Synced GPL-3.0 Corporate Dependencies Manifest
+├── server.js                    <-- Node.js Telemetry Pipeline Engine
+├── binary_parser.js             <-- 7-Byte Bit-Shifting Data Decoder
+├── backup_policy.sh             <-- Database Auto-Retention Shell Utility
+├── firmware/
+│   └── shwas_core_firmware.ino  <-- ESP32 Low-Power Anti-Tamper Firmware
+├── hardware/
+│   ├── shwas_v1.drl             <-- Excellon CNC Mechanical Factory Drill Map
+│   ├── pick_and_place_centroid.csv <-- Pick-and-Place Robot Position Matrix
+│   └── enclosure_spec.scad      <-- OpenSCAD Polycarbonate Housing Assembly Code
+└── public/
+    ├── index.html               <-- Live Interactive Leaflet Dashboard Map
+    ├── login.html               <-- Government Administrator Protection Portal
+    └── factory_jig.html         <-- Assembly Line Quality Control Test Screen
+ ```   
 ## 2. Complete Configuration & Infrastructure Files## .gitignore
 
 # Dependency directories
