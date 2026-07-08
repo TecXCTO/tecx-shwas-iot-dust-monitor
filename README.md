@@ -5,7 +5,7 @@ To implement the complete Project Shwas repository on GitHub, here is the produc
 You can deploy this structure by initializing a clean repository on GitHub named shwas-iot-dust-monitor and running the automation shell installer provided in Section 4.
 ------------------------------
 ## 1. GitHub Repository Directory Layout
-
+```
 shwas-iot-dust-monitor/ (Repository Root)
 ├── .github/
 │   └── workflows/
@@ -27,7 +27,7 @@ shwas-iot-dust-monitor/ (Repository Root)
     ├── index.html                <-- Live Interactive Dark Leaflet Dashboard Map
     ├── login.html                <-- DMG Admin Authentication Portal Interface
     └── factory_jig.html          <-- Assembly Line Quality Control Test Screen
-
+```
 ------------------------------
 ## 2. Complete Configuration & Infrastructure Files## .gitignore
 
