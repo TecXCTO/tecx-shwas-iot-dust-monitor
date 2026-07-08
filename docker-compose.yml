@@ -1,28 +1,71 @@
+# ==============================================================================
+# PROJECT SHWAS (श्वॉस) — FINAL MASTER DOCKER ORCHESTRATION ARCHITECTURE
+# Profile: Production Environment Stack (Core server, SQLite, and Local MQTT Broker)
+# Operating License: GPL-3.0-only
+# ==============================================================================
+
 version: '3.8'
+
 services:
+  # Service 1: Open-Source Local MQTT Message Broker (Handles local LoRa Gateway links)
+  shwas-mqtt-broker:
+    image: eclipse-mosquitto:latest
+    container_name: shwas_mqtt_broker
+    restart: always
+    ports:
+      - "1883:1883"   # Standard open telemetry ingestion port for your LoRa Gateways
+    volumes:
+      - shwas_mosquitto_data:/mosquitto/data
+      - shwas_mosquitto_logs:/mosquitto/log
+    # Internal configuration command to allow direct gateway links across the network
+    command: mosquitto -c /mosquitto-no-auth.conf
+    networks:
+      - shwas_telemetry_network
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "5m"
+        max-file: "2"
+
+  # Service 2: Project Shwas Ingestion Server Engine & Dashboard App Hub
   shwas-core-app:
     image: node:18-alpine
     container_name: shwas_core_service
     restart: always
+    depends_on:
+      - shwas-mqtt-broker
     environment:
       - NODE_ENV=production
       - PORT=3000
+      - MQTT_BROKER_URL=mqtt://shwas-mqtt-broker:1883
       - TWILIO_ACCOUNT_SID=ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
       - TWILIO_AUTH_TOKEN=your_auth_token_here
-      - MQTT_BROKER_URL=mqtt://://hivemq.com
     ports:
-      - "3000:3000"
-      - "1883:1883"
+      - "3000:3000"   # Maps live Leaflet web dashboard UI map tracking screens
     volumes:
       - .:/usr/src/app
       - shwas_database_volume:/usr/src/app/database
     working_dir: /usr/src/app
-    command: sh -c "npm install && node server.js"
+    # Clears code caches, installs production requirements, and runs your 15-byte binary decoder backend
+    command: sh -c "npm install --production && node server.js"
+    networks:
+      - shwas_telemetry_network
     logging:
       driver: "json-file"
       options:
         max-size: "10m"
         max-file: "3"
+
+# Non-Volatile Volume definitions to ensure database records survive container restarts
 volumes:
   shwas_database_volume:
     driver: local
+  shwas_mosquitto_data:
+    driver: local
+  shwas_mosquitto_logs:
+    driver: local
+
+# Isolated network bridge linking your database manager, app engine, and radio handler together
+networks:
+  shwas_telemetry_network:
+    driver: bridge
