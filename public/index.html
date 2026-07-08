@@ -1,1 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Project Shwas — Telemetry Dashboard</title>
+    <link rel="stylesheet" href="https://unpkg.com" />
+    <style>
+        body { margin: 0; background: #0f172a; color: #f8fafc; font-family: system-ui, sans-serif; }
+        #app-bar { padding: 15px 25px; background: #1e293b; border-bottom: 3px solid #f97316; display: flex; justify-content: space-between; align-items: center; }
+        #map-container { height: calc(100vh - 75px); width: 100%; }
+        @keyframes breach-flash { 0% { opacity: 0.3; } 50% { opacity: 0.9; } 100% { opacity: 0.3; } }
+        .blink-animation { animation: breach-flash 1s infinite; }
+    </style>
+</head>
+<body>
 
+<div id="app-bar">
+    <h2 style="margin:0; font-size: 20px; color: #f97316;">SHWAS TELEMETRY NETWORK CONTROL PANEL</h2>
+    <div id="status" style="color: #22c55e; font-weight: bold;">● REGULATORY MONITOR ONLINE</div>
+</div>
+<div id="map-container"></div>
+
+<script src="https://unpkg.com"></script>
+<script>
+    const map = L.map('map-container').setView([26.238, 73.024], 12); 
+    L.tileLayer('https://{s}://{z}/{x}/{y}{r}.png').addTo(map);
+
+    const nodes = {};
+    const ws = new WebSocket(`ws://${window.location.host}`);
+
+    ws.onmessage = (event) => {
+        const payload = JSON.parse(event.data);
+        if (payload.type === "update") {
+            const isTampered = payload.tamper !== "SECURE";
+            const circleColor = isTampered ? "#db2777" : (payload.pm10 > 10000 ? "#ef4444" : "#22c55e");
+            
+            if (nodes[payload.id]) { map.removeLayer(nodes[payload.id]); }
+
+            nodes[payload.id] = L.circle([26.238 + (payload.id * 0.005), 73.024], {
+                color: circleColor, fillColor: circleColor, fillOpacity: 0.5, radius: 250,
+                className: isTampered ? "blink-animation" : ""
+            }).addTo(map).bindPopup(`
+                <div style="font-family:sans-serif; font-size:12px; color:#334155;">
+                    <b style="font-size:14px; color:#000;">Quarry Node ID: ${payload.id}</b><br><hr>
+                    <b>PM10 Density:</b> ${payload.pm10} µg/m³<br>
+                    <b>PM2.5 Density:</b> ${payload.pm25} µg/m³<br>
+                    <b>Internal Power:</b> ${payload.volt ? payload.volt.toFixed(2) : "3.95"} V<br>
+                    <b>Chassis State:</b> <span style="color:${circleColor}; font-weight:bold;">${payload.tamper}</span>
+                </div>
+            `);
+        }
+    };
+</script>
+</body>
+</html>
