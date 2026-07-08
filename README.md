@@ -404,9 +404,9 @@ U1,ESP32-WROOM-32E,SMD-38,50.00,45.00,0,Top
 U2,RFM95W,SMD-16,22.50,75.00,90,Top
 REG1,LM2596S-5.0,TO-263,85.00,20.00,180,Top
 Q1,MMBT3904,SOT-23,45.20,68.10,270,Top
-
+```
 ## hardware/enclosure_spec.scad
-
+```
 $fn = 60;
 box_width = 120;
 box_length = 100;
