@@ -1,3 +1,6 @@
+/*
+Real-Time Branch Push Webhook Handler (server_webhook.js)To set up an automated notification hook that alerts your team whenever a developer pushes a new branch to GitHub, add this lightweight endpoint receiver code block directly inside your main server.js file:
+*/
 // Add inside your existing express configuration block in server.js:
 app.use(express.json()); // Ensures express parses incoming JSON webhook payloads
 
@@ -29,3 +32,6 @@ app.post('/api/v1/shwas/github-webhook', (req, res) => {
     res.status(400).json({ error: "Invalid payload layout signature" });
 });
 
+/* 
+To connect this endpoint to your GitHub repository, navigate to your GitHub settings panel (Settings -> Webhooks -> Add Webhook), paste your public server URL target (http://YOUR_SERVER_IP:3000/api/v1/shwas/github-webhook), set the Content type to application/json, and select the Just the push event trigger option.
+*/
