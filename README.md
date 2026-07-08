@@ -246,7 +246,7 @@ mqttClient.on('message', (topic, messageBuffer) => {
 server.listen(3000, () => console.log("Shwas Control Dashboard active at http://localhost:3000"));
 ```
 ## backup_policy.sh
-
+```
 #!/bin/sh# Project Shwas - Automated Data Backup & Retention Script
 
 BACKUP_DIR="./database/backups"
@@ -262,9 +262,9 @@ sqlite3 "$DB_FILE" "VACUUM;"
 # Delete backup artifacts older than 30 days
 find "$BACKUP_DIR" -type f -name "*.gz" -mtime +30 -delete
 echo ">> Data backup and log maintenance completed successfully."
-
+```
 ## firmware/shwas_core_firmware.ino
-
+```
 /**
  * Project Shwas — Embedded Node Telemetry & Security Engine Core
  */
@@ -370,9 +370,9 @@ void handleLocalTerminal() {
     }
   }
 }
-
+```
 ## hardware/shwas_v1.drl
-
+```
 M48
 METRIC,TZ
 T01C0.80
@@ -396,9 +396,9 @@ X115000Y005000
 X005000Y095000
 X115000Y095000
 M30
-
+```
 ## hardware/pick_and_place_centroid.csv
-
+```
 Designator,Value,Package,X-Center (mm),Y-Center (mm),Rotation (Deg),Layer
 U1,ESP32-WROOM-32E,SMD-38,50.00,45.00,0,Top
 U2,RFM95W,SMD-16,22.50,75.00,90,Top
@@ -434,9 +434,9 @@ union() {
     translate([-40, 30, -box_height/2])  cylinder(h=6, r1=3, r2=2);
     translate([40, 30, -box_height/2])   cylinder(h=6, r1=3, r2=2);
 }
-
+```
 ## public/index.html
-
+```
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -492,9 +492,9 @@ union() {
 </script>
 </body>
 </html>
-
+```
 ## public/login.html
-
+```
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -522,9 +522,9 @@ union() {
 </div>
 </body>
 </html>
-
+```
 ## public/factory_jig.html
-
+```
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -562,8 +562,9 @@ union() {
 </script>
 </body>
 </html>
-
+```
 ## README.md
-
+```
 # Project Shwas (श्वॉस) — Open-Source IoT Dust Monitor Network
 Project Shwas matches the home IoT dust-monitoring design parameter challenge by delivering low-cost edge air monitoring units optimized for informal, unmapped mine blocks [Low-cost dust sensor hardware (target: a fraction of current industrial-grade options), Design built for small unregistered 
+```
