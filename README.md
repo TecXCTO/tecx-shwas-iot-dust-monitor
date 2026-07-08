@@ -2,9 +2,7 @@
 ## TSiotDM
 
 # tecx-shwas-iot-dust-monitor
-To implement the complete Project Shwas repository on GitHub, here is the production-grade repository architecture. This code contains zero placeholders or cut-off scripts.
-
-You can deploy this structure by initializing a clean repository on GitHub named shwas-iot-dust-monitor and running the automation shell installer provided in Section 4.
+To implement the complete Project Shwas repository on GitHub, here is the production-grade repository architecture. This code contains zero placeholders or cut-off scripts. You can deploy this structure by initializing a clean repository on GitHub named shwas-iot-dust-monitor and running the automation shell installer provided in Section 4.
 ------------------------------
 
 # TSIOTDM
