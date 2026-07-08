@@ -8,3 +8,7 @@ chmod +x purge_merged_branches.sh
 ./purge_merged_branches.sh
 
 npm test
+docker-compose up -d --build
+
+# http://localhost:3000
+
