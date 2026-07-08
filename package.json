@@ -6,7 +6,7 @@
   "main": "server.js",
   "scripts": {
     "start": "node server.js",
-    "test": "node -c server.js && node -c binary_parser.js"
+    "test": "node -c server.js && node -c binary_parser.js && mocha test_suite.js"
   },
   "keywords": [
     "esp32",
