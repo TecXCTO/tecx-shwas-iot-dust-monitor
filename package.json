@@ -16,13 +16,17 @@
     "open-source-hardware",
     "mqtt"
   ],
-  "author": "TecX's C.T.O. Rahul Saini",
-  "license": "MIT",
+  "author": "TecX's C.T.O. Rahul Saini <support@shwas.iot.tecx.ai> d.b.a. TecX <shwas@iot.tecx.ai> (https://www.shwas.iot.tecx.ai)",
+  "license": "GPL-3.0-only",
   "dependencies": {
     "express": "^4.19.2",
     "mqtt": "^5.5.5",
     "sqlite3": "^5.1.7",
     "twilio": "^5.0.4",
     "ws": "^8.17.0"
+  },
+  "devDependencies": {
+    "mocha": "^10.4.0",
+    "supertest": "^6.3.4"
   }
 }
