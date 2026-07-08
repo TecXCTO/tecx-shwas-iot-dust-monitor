@@ -16,7 +16,7 @@
     "open-source-hardware",
     "mqtt"
   ],
-  "author": "TecX's C.T.O.",
+  "author": "TecX's C.T.O. Rahul Saini",
   "license": "MIT",
   "dependencies": {
     "express": "^4.19.2",
