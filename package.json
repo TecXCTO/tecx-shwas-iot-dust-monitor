@@ -1,1 +1,28 @@
 
+{
+  "name": "shwas-iot-dust-monitor",
+  "version": "1.0.0",
+  "description": "Open-Source Low-Cost Edge-IoT Dust Telemetry & Worker Safety Infrastructure",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "test": "node -c server.js && node -c binary_parser.js"
+  },
+  "keywords": [
+    "esp32",
+    "lora",
+    "dust-sensor",
+    "silicosis",
+    "open-source-hardware",
+    "mqtt"
+  ],
+  "author": "Project Shwas Engineering",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.19.2",
+    "mqtt": "^5.5.5",
+    "sqlite3": "^5.1.7",
+    "twilio": "^5.0.4",
+    "ws": "^8.17.0"
+  }
+}
