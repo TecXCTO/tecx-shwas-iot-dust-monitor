@@ -1,0 +1,45 @@
+name: Project Shwas Production Release Compiler
+
+on:
+  push:
+    tags:
+      - 'v*' # Trigger build compilation exclusively when pushing version tags
+
+jobs:
+  compile-release:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+    - name: Checkout Complete Codebase Source
+      uses: actions/checkout@v3
+
+    - name: Compress System Production Assets Package
+      run: |
+        mkdir -p deploy_bundle/hardware deploy_bundle/firmware
+        cp server.js binary_parser.js package.json docker-compose.yml deploy_bundle/
+        cp -r public deploy_bundle/
+        cp firmware/shwas_core_firmware.ino deploy_bundle/firmware/
+        cp hardware/* deploy_bundle/hardware/
+        tar -czvf shwas_production_release_${{ github.ref_name }}.tar.gz deploy_bundle
+
+    - name: Generate Automated Structural GitHub Release Note
+      id: create_release
+      uses: softprops/action-gh-release@v1
+      with:
+        files: shwas_production_release_${{ github.ref_name }}.tar.gz
+        name: Project Shwas Release ${{ github.ref_name }}
+        body: |
+          ## Project Shwas (श्वॉस) — Telemetry Ecosystem Production Build Release [${{ github.ref_name }}]
+          
+          ### 🛠️ Stable Release Deliverables:
+          - **Verified Microcontroller Firmware Core:** Includes SHA-256 local terminal blocks and physical case-tamper interrupt handlers [Non-Volatile Storage (NVS) Library - ESP32].
+          - **7-Byte Binary Compression Engine:** Optimized to minimize telemetry bandwidth usage across weak cellular networks.
+          - **Containerized Server Infrastructure Stack:** Node.js ingestion backend paired with an automated, self-cleaning SQLite time-series database.
+          
+          *All assembly, layout, firmware, and deployment assets are pre-verified for factory scaling.*
+        draft: false
+        prerelease: false
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
