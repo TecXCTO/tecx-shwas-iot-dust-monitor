@@ -88,6 +88,7 @@ jobs:
         node -c binary_parser.js
 
 ## package.json
+```
 
 {
   "name": "shwas-iot-dust-monitor",
@@ -116,7 +117,7 @@ jobs:
     "ws": "^8.17.0"
   }
 }
-
+```
 ## docker-compose.yml
 
 version: '3.8'
