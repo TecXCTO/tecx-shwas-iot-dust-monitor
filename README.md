@@ -564,7 +564,8 @@ union() {
 </html>
 ```
 ## README.md
-```
+
 # Project Shwas (श्वॉस) — Open-Source IoT Dust Monitor Network
+```
 Project Shwas matches the home IoT dust-monitoring design parameter challenge by delivering low-cost edge air monitoring units optimized for informal, unmapped mine blocks [Low-cost dust sensor hardware (target: a fraction of current industrial-grade options), Design built for small unregistered 
 ```
