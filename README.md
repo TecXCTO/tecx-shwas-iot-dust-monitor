@@ -84,6 +84,32 @@ PROJECT SHWAS (श्वॉस) — MASTER DEPLOYMENT FILE INDEX MATRIX
       └── index.html            -> Live Dark-Mode Leaflet Dashboard Tracking Map UI
 =================================================================================
 ```
+To prevent errors when handling raw binaries, processing satellite coordinates, or flashing secure eFuses natively on a Windows workstation, place these specific configuration tools in the following file locations.
+```
+shwas-iot-dust-monitor/ (Repository Root)
+├── .github/
+│   ├── PULL_REQUEST_TEMPLATE.md
+│   └── workflows/
+│       └── node-ci.yml
+├── package.json                 
+├── server.js                    
+├── binary_parser.js             
+├── install_dependencies.bat     <-- 🟢 Click-to-Install Node Libraries & Run Local Unit Tests
+├── init_git_architecture.ps1    <-- 🟢 Automated 3-Branch Deployment Script for Windows
+├── flash_secure_core.bat        <-- 🟢 Automated Encryption & Hardware Code-Lock Tool for Windows
+├── firmware/
+│   └── shwas_core_firmware.ino  
+├── hardware/
+│   ├── shwas_v2.drl             
+│   ├── pick_and_place_centroid.csv 
+│   ├── enclosure_spec.scad      
+│   └── enclosure_lid.scad       
+└── public/
+    ├── index.html               
+    ├── login.html               
+    └── factory_jig.html         
+
+```
 ## 2. Complete Configuration & Infrastructure Files## .gitignore
 
 # Dependency directories
