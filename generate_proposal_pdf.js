@@ -4,6 +4,8 @@
  * License: GPL-3.0-only
  */
 
+// npm install pdfkit
+// node generate_proposal_pdf.js.
 const fs = require('fs');
 const PDFDocument = require('pdfkit');
 
