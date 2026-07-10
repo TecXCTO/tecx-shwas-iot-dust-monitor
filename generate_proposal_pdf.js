@@ -14,8 +14,8 @@ function buildProposalBooklet() {
         margin: 50,
         size: 'A4',
         info: {
-            Title: 'Project Shwas Detailed Government Proposal',
-            Author: 'Shwas Environmental Technologies Private Limited'
+            Title: 'Shwas IOT Dust Monitoring',
+            Author: 'Rahul Saini d.b.a. TECX'
         }
     });
 
