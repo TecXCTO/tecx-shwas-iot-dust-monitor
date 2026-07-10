@@ -1,11 +1,23 @@
 /**
  * Project Shwas — Embedded Node Telemetry & Security Engine Core
  */
-#include <HardwareSerial.h>#include <SPI.h>#include <LoRa.h>#include <Preferences.h>
-#define TAMPER_PIN         13#define SENSOR_POWER_PIN   25#define SIREN_PIN          12#define BATTERY_ADC_PIN    34#define LORA_SS            5#define LORA_RST           14#define LORA_DIO0          4
+#include <HardwareSerial.h>
+#include <SPI.h>
+#include <LoRa.h>
+#include <Preferences.h>
+#define TAMPER_PIN         13
+#define SENSOR_POWER_PIN   25
+#define SIREN_PIN          12
+#define BATTERY_ADC_PIN    34
+#define LORA_SS            5
+#define LORA_RST           14
+#define LORA_DIO0          4
 #define PM10_DANGER_LEVEL  10000
-Preferences flashMemory;HardwareSerial DustSerial(2);
-volatile bool hardwareTamperFlag = false;float activeSlopeCorrection = 1.0;bool isTerminalUnlocked = false;
+Preferences flashMemory;
+HardwareSerial DustSerial(2);
+volatile bool hardwareTamperFlag = false;
+float activeSlopeCorrection = 1.0;
+bool isTerminalUnlocked = false;
 struct __attribute__((__packed__)) HighDensityPayload {
     uint8_t  nodeId;       
     uint16_t pm25Packed;   
