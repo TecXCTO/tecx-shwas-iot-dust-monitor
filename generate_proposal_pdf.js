@@ -42,7 +42,7 @@ function buildProposalBooklet() {
     doc.fillColor('#334155').fontSize(11).font('Helvetica-Bold')
        .text('PROPOSED BY:', 50, 400);
     doc.fillColor('#0f172a').fontSize(13).font('Helvetica')
-       .text('Shwas Environmental Technologies Private Limited\nContact: contact@shwasenv.in | Web: https://shwasenv.in', 50, 420, { lineGap: 4 });
+       .text('TecX Private Limited\nContact: contact@shwas.iot.tecx.ai | Web: https://shwas.iot.tecx.ai', 50, 420, { lineGap: 4 });
 
     doc.fillColor('#475569').fontSize(10).font('Helvetica-Oblique')
        .text('Compliance Protection Registry: SPDX License Framework Target [GPL-3.0-only]', 50, 750);
