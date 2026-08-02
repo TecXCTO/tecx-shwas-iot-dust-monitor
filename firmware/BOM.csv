@@ -1,0 +1,22 @@
+Comment,Designator,Footprint,LCSC Part Number,Description
+ESP32-WROOM-32E-N8,U1,SMD-Module,C701341,Dual-Core MCU 8MB Flash Module
+RFM95W-915S2,U2,SMD-Castellated,C90023,LoRa Transceiver Module 915MHz
+CN3065,U3,SOP-8_EP,C35123,Solar Li-Ion Charger IC
+SGM2526-1YTN5G/TR,U4,SOT-23-5,C420456,Over-Voltage Protection Fuse Switch
+DW01A,U5,SOT-23-6,C2314,Battery Protection Controller
+FS8205S,Q1,TSSOP-8,C8205,Dual N-Channel MOSFET Protection Switch
+AO3401A,Q2,SOT-23,C3401,P-Channel Power-Path MOSFET Switch
+TLV62569DBVR,U6,SOT-23-5,C12569,1.5MHz Synchronous Buck Regulator
+2.2uH Power Inductor,L1,SMD-4040,C4040,Shielded High-Current Inductor 2A
+22uF X7R Cap,C1,0805,C22610,Ceramic Filter Capacitor 10V
+10uF Tantalum Bulk,C2 C3 C4,Case-A_3216,C10610,Low-ESR Bulk Tantalum Capacitor
+100nF X7R Decoupling,C5 C6 C7,0402,C10402,High-Frequency Bypass MLCC Cap
+10k Ohm Resistor 1%,R1 R2 R3,0402,C1002,Precision Telemetry & Gate Pull-Ups
+22 Ohm Signal Resistor,R4 R5 R6 R7,0402,C220,SPI Line Dampening Resistors
+MMBT3904,Q3,SOT-23,C3904,NPN Transistor Buzzer Switch
+5V Active Buzzer,LS1,SMD-8585,C8585,Magnetic Audible Indicator Beeper
+Red SMD Alert LED,LED1,0603,C603R,Hardware OVP Warning LED indicator
+Green Status LED,LED2,0603,C603G,Battery Fully Charged Status Light
+SMA Edge-Mount Connector,J1,SMD-Launch,C5050,50-Ohm Threaded Female Antenna Jack
+USB Type-C 16-Pin,J2,SMD-MidMount,C1616,Power Input Charging Interface
+JST-PH 2.0mm Header,J3,SMD-RightAngle,C2020,Lithium Battery Plug Attachment Pad
