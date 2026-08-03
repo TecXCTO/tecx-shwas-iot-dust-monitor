@@ -1,6 +1,6 @@
 # Complete Unified Visual Layout Map 
 
- To make sure your physical layout is easy to understand, the diagram below combines every component from your previous prompts—including the USB-C port, Solar Panel inputs, Protection ICs, Buck Regulator, ESP32 processor, LoRa module, and the 50-Ohm SMA Antenna waveguide—arranged exactly as they should be placed on your 4-layer FR4 board.
+ To make sure physical layout is easy to understand, the diagram below combines every component from your previous prompts—including the USB-C port, Solar Panel inputs, Protection ICs, Buck Regulator, ESP32 processor, LoRa module, and the 50-Ohm SMA Antenna waveguide—arranged exactly as they should be placed on your 4-layer FR4 board.
 
 ```
   +-------------------------------------------------------------------------------------------------------------------+
