@@ -42,7 +42,12 @@ Thanking you,
 
 Yours faithfully,
 
-For [Your Registered ECX Corporate Name Pvt. Ltd.](Authorized Signature & Company Seal)
+For [Your Registered ECX Corporate Name Pvt. Ltd.]
+
+
+(Authorized Signature & Company Seal)
+
+
 Name: [Your Full Name]
 Designation: Managing Director / Authorized Signatory
 Contact Number: [Your Corporate Mobile/Phone Number]
