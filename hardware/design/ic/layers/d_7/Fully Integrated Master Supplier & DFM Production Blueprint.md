@@ -1,4 +1,4 @@
-1. Automated Component Tracking Number:
+# 1. Automated Component Tracking Number:
 
 How it WorksTo track thousands of manufactured boards as a company, you cannot print a static number onto the board. Every single board needs its own unique tracking identity.To achieve this without increasing your printing costs, modern automated factories use a process called Laser Marking / Laser Engraving.During Stage 5 (Solder Mask & Silkscreen) of the manufacturing process, after the white epoxy ink company logo is printed, the panel is passed into a high-precision Industrial Fiber Laser Marking Machine.The machine reads the unique serial database for your batch.It uses a micro-laser beam to vaporize away a tiny section of the green solder mask layer, exposing the shiny copper underneath in the shape of a Machine-Readable 2D DataMatrix QR Code and a Human-Readable Serial Number String (e.g., SN-2026-00001 through SN-2026-05000).This tracking marker is placed in a designated empty clearance zone on your board. As each unit rolls off the reflow line, automated scanners log its test results directly to your quality database.
 
