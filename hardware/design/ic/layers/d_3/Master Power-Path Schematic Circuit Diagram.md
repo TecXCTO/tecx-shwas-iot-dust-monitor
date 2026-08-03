@@ -59,5 +59,8 @@ Updated Power-Path Bill of Materials (BOM)
 Add these two critical surface-mount parts to your manufacturing list to build this automatic switching feature:
 
 ```
-Component FunctionComponent Industrial NamePackage Type (SMD)PurposePower-Path SwitchAO3401A P-Channel MOSFETSOT-23Disconnects the battery when external Solar/USB power is active.Battery Isolation DiodeB130-13-F Schottky DiodeSOD-123Prevents external power from flowing backward into the battery.Pull-Up Resistor10k Ohm Resistor0402Keeps the MOSFET gate stable during power transitions.
+Component FunctionComponent Industrial NamePackage Type (SMD)Purpose
+Power-Path SwitchAO3401A P-Channel MOSFETSOT-23Disconnects the battery when external Solar/USB power is active.
+Battery Isolation DiodeB130-13-F Schottky DiodeSOD-123Prevents external power from flowing backward into the battery.
+Pull-Up Resistor10k Ohm Resistor0402Keeps the MOSFET gate stable during power transitions.
 ```
