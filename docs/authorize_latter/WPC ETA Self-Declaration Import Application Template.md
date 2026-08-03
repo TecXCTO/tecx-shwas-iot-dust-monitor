@@ -3,11 +3,11 @@ WPC ETA Self-Declaration Import Application TemplateTo prevent Indian Customs fr
 
   ```
 COMPANY LETTERHEAD
-  [Registered ECX Corporate Name Pvt. Ltd.]
+  [Registered T ECX T ecX Corporate Pvt. Ltd.]
   [Full Office Street Address Lines, City, State, Pin Code]
   Corporate Identification Number (CIN): [Your Company CIN]
 
-Date: August 2, 2026
+Date: August 3, 2026
 
 To,
 
