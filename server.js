@@ -36,7 +36,7 @@ mqttClient.on('message', (topic, messageBuffer) => {
 
         if ((decoded.pm10 >= 10000 || decoded.security.caseTamperAlert) && SMS_GATEWAY) {
             SMS_GATEWAY.messages.create({
-                body: `🚨 SHWAS COMPLIANCE CRITICAL: Mine Node [${mineId}] entered alarm state: ${securityState}. PM10 density: ${decoded.pm10} ug/m3. Immediate water mist suppression required.`,
+                body: `SHWAS COMPLIANCE CRITICAL: Mine Node [${mineId}] entered alarm state: ${securityState}. PM10 density: ${decoded.pm10} ug/m3. Immediate water mist suppression required.`,
                 to: '+919876543210', from: '+1234567890'
             }).catch(err => console.error("SMS routing exception:", err.message));
         }
