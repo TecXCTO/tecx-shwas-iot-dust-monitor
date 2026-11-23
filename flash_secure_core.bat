@@ -18,7 +18,7 @@ REM Step 1: Ensure the Espressif Python tool suites are installed on Windows pat
 where espsecure.py >nul 2>nul
 if %errorlevel% neq 0 (
     color 0C
-    echo ❌ ERROR: Espressif tools not found. Run: pip install esptool
+    echo ERROR: Espressif tools not found. Run: pip install esptool
     pause
     exit /b
 )
