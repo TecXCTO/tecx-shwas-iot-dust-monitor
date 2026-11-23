@@ -1,4 +1,5 @@
 # TecX
+repository named shwas-iot-dust-monitor.
 ## TSiotDM
 
 # Project Shwas (श्वॉस) — Open-Source IoT Dust Monitor Network
@@ -8,7 +9,6 @@ Project Shwas matches the home IoT dust-monitoring design parameter challenge by
 # tecx-shwas-iot-dust-monitor
 To implement the complete Project Shwas repository, here is the production-grade repository architecture. This code contains zero placeholders or cut-off scripts.
 
-repository named shwas-iot-dust-monitor.
 ------------------------------
 
 # TSIOTDM
