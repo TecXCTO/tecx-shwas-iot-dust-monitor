@@ -8,7 +8,6 @@ How it WorksTo track thousands of manufactured boards as a company, you cannot p
   
 ```
 +-----------------------------------------------------------------------------------------------------------------------+
-
 | MANUFACTURING PANEL IDENTIFIER BOUNDARY                                                                               |
 | (O) [3.2mm Tooling Hole]                                                                   (O) [3.2mm Tooling Hole]   |
 | ===== [ 5.0mm Top Clearance Waste Edge Rail Grip Margin for Automated Factory Conveyor Machine Belts ] ============== |
@@ -47,21 +46,21 @@ How it WorksTo track thousands of manufactured boards as a company, you cannot p
 |  |        |    |    |    |   |  +==> [GPIO 13] -> [MMBT3904] -> [5V BUZZER]     |   Layer 3 Power Only)||  (14mil W/  |
 |  |        |    |    |    |   |                                  (Siren Alert)   |                      ||   6mil S    |
 |  |        |    |    |    |   +=====> [GPIO 4]                                   |                      ||  Waveguide)
-|  |        |    |    |    |           (OVP Trip Input Capture)                   |                      ||     |      |
-|  |        |    |    |    |                                                      |                      ||     v      |
-|  |     [4x 22 Ohm Signal Resistors]                                             |                      || [SMA JACK] |
-|  |        |    |    |    |                                                      |                      || (Antenna)  |
-|  |        +----+----+----+========== 10mil SPI Data Bridge Lines ===============|======================||=====>      |
-|  |                                                                              |                      ||            |
-|  |     =========================             ==============================     |                      ||            |
-|  |     *       TECX LOGO       *             *  LASER ENGRAVED TRACKING   *     |                      ||            |
-|  |     * (H:1mm / L:0.15mm Ink) *             *  NUMBER SERIAL/QR ZONE    *     |                      ||            |
-|  |     =========================             ==============================     |                      ||            |
-|  |                                                                              |                      ||            |
-|  |                                      (::: Ground Surface Vias Stitching 1mm :::) |                  ||            |
-|  +------------------------------------------------------------------------------+                      ||            |
-|                                                                                                        ||            |
-| ===== [ 5.0mm Bottom Clearance Waste Edge Rail Grip Margin with [*] [Fiducial Dots Alignment Marks] ] =======        |
+|  |        |    |    |    |           (OVP Trip Input Capture)                   |                      ||     |       |
+|  |        |    |    |    |                                                      |                      ||     v       |
+|  |     [4x 22 Ohm Signal Resistors]                                             |                      || [SMA JACK]  |
+|  |        |    |    |    |                                                      |                      || (Antenna)   |
+|  |        +----+----+----+========== 10mil SPI Data Bridge Lines ===============|======================||=====>       |
+|  |                                                                              |                      ||             |
+|  |     =========================             ==============================     |                      ||             |
+|  |     *       TECX LOGO       *             *  LASER ENGRAVED TRACKING   *     |                      ||             |
+|  |     * (H:1mm / L:0.15mm Ink) *             *  NUMBER SERIAL/QR ZONE    *     |                      ||             |
+|  |     =========================             ==============================     |                      ||             |
+|  |                                                                              |                      ||             |
+|  |                                      (::: Ground Surface Vias Stitching 1mm :::) |                  ||             |
+|  +------------------------------------------------------------------------------+                      ||             |
+|                                                                                                        ||             |
+| ===== [ 5.0mm Bottom Clearance Waste Edge Rail Grip Margin with [*] [Fiducial Dots Alignment Marks] ] =======         |
 | [ V-SCORE MILLING ENVELOPE AXIS AXIS AXIS AXIS AXIS AXIS AXIS AXIS AXIS AXIS AXIS AXIS AXIS AXIS AXIS ]               |
 +-----------------------------------------------------------------------------------------------------------------------+
   ```
