@@ -54,8 +54,8 @@ How it WorksTo track thousands of manufactured boards as a company, you cannot p
 |  |        +----+----+----+========== 10mil SPI Data Bridge Lines ===============|======================||=====>       |
 |  |                                                                              |                      ||            |
 |  |     =========================             ==============================     |                      ||            |
-|  |     *       ECX LOGO        *             *  LASER ENGRAVED TRACKING   *     |                      ||            |
-|  |     * (H:1mm / L:0.15mm Ink) *             *  NUMBER SERIAL/QR ZONE     *     |                      ||            |
+|  |     *       TECX LOGO       *             *  LASER ENGRAVED TRACKING   *     |                      ||            |
+|  |     * (H:1mm / L:0.15mm Ink) *             *  NUMBER SERIAL/QR ZONE    *     |                      ||            |
 |  |     =========================             ==============================     |                      ||            |
 |  |                                                                              |                      ||            |
 |  |                                      (::: Ground Surface Vias Stitching 1mm :::) |                      ||            |
