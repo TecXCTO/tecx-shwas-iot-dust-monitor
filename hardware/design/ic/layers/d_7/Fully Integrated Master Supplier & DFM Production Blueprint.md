@@ -7,7 +7,7 @@ How it WorksTo track thousands of manufactured boards as a company, you cannot p
   This updated engineering blueprint updates your company logo to the corrected "ECX" text branding, establishes the precise Laser Engraving Tracking Number Zone, and adds the necessary machine-alignment Fiducial Points.
   
 ```
-  +-----------------------------------------------------------------------------------------------------------------------+
+ +-----------------------------------------------------------------------------------------------------------------------+
 
 | MANUFACTURING PANEL IDENTIFIER BOUNDARY                                                                               |
 | (O) [3.2mm Tooling Hole]                                                                   (O) [3.2mm Tooling Hole]   |
