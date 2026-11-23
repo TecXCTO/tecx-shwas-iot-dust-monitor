@@ -15,7 +15,7 @@ How it WorksTo track thousands of manufactured boards as a company, you cannot p
 |                                                                                                                       |
 |  [ SOLAR INPUT PAD ] --> [SS34 Diode] ---+                                                                            |
 |                                          |                                                                            |
-|  [ USB-C 16-PIN ] -----> [SGM2526 OVP] --+---> [ V_EXT INPUT LINE ]                                               |
+|  [ USB-C 16-PIN ] -----> [SGM2526 OVP] --+---> [ V_EXT INPUT LINE ]                                                   |
 |                             |                    |                                                                    |
 |     (OVP Fault Line)        |                    v                                                                    |
 |                             |             [CN3065 CHARGER IC]                                                         |
@@ -23,7 +23,7 @@ How it WorksTo track thousands of manufactured boards as a company, you cannot p
 |                             |    (CHG) ----+    |       v (4.2V Max Charging Profile)                                 |
 |                             |    (DONE) --------+       |                                                             |
 |                             |                           v                                                             |
-|                             |               [JST-PH 2.0mm BATTERY CONNECTOR] <---> [DW01A+FS8205S TELEMETRY PROTECTION]   |
+|                             |           [JST-PH 2.0mm BATTERY CONNECTOR] <---> [DW01A+FS8205S TELEMETRY PROTECTION]   |
 |                             |                           |                                                             |
 |                             |                           v                                                             |
 |                             |               [AO3401A P-CHANNEL POWER-PATH]                                            |
@@ -36,14 +36,14 @@ How it WorksTo track thousands of manufactured boards as a company, you cannot p
 |  ===========================|===========================|============================================================ |
 |                             | [FAULT ALARM STRAP]       | (Clean 3.3V DC Power Bus Line)                              |
 |                             |                           |                                                             |
-|  +--------------------------v---------------------------v--------------------+                      || [ RF ]    |
-|  |  [ DIGITAL ZONE - LAYER 1 COMPONENT FLOOD POUR ]                             |                      ||            |
-|  |                                                                              |                      || +-------+  |
-|  |     +-------------------------+            [10k/10k DC Resistor Divider]     |                      || | LoRa  |  |
-|  |     |   ESP32-WROOM-32E       | <========= (Battery Life Voltage Node)        |                      || | MODULE|  |
-|  |     |  (Primary Processor)    |                                              |  POWER ISOLATION     || |RFM95W |  |
-|  |     +-------------------------+                                              |  MOAT GAP            || +---+---+  |
-|  |        |    |    |    |   |  |                                               |  (0.5mm Core Cut on  ||     |      |
+|  +--------------------------v---------------------------v--------------------+                          || [ RF ]     |
+|  |  [ DIGITAL ZONE - LAYER 1 COMPONENT FLOOD POUR ]                             |                       ||            |
+|  |                                                                              |                       || +-------+  |
+|  |     +-------------------------+            [10k/10k DC Resistor Divider]     |                       || | LoRa  |  |
+|  |     |   ESP32-WROOM-32E       | <========= (Battery Life Voltage Node)       |                       || | MODULE|  |
+|  |     |  (Primary Processor)    |                                              |  POWER ISOLATION      || |RFM95W |  |
+|  |     +-------------------------+                                              |  MOAT GAP             || +---+---+  |
+|  |        |    |    |    |   |  |                                               |  (0.5mm Core Cut on   ||     |      |
 |  |        |    |    |    |   |  +==> [GPIO 13] -> [MMBT3904] -> [5V BUZZER]     |   Layer 3 Power Only)||  (14mil W/  |
 |  |        |    |    |    |   |                                  (Siren Alert)   |                      ||   6mil S    |
 |  |        |    |    |    |   +=====> [GPIO 4]                                   |                      ||  Waveguide)
@@ -51,17 +51,17 @@ How it WorksTo track thousands of manufactured boards as a company, you cannot p
 |  |        |    |    |    |                                                      |                      ||     v      |
 |  |     [4x 22 Ohm Signal Resistors]                                             |                      || [SMA JACK] |
 |  |        |    |    |    |                                                      |                      || (Antenna)  |
-|  |        +----+----+----+========== 10mil SPI Data Bridge Lines ===============|======================||=====>       |
+|  |        +----+----+----+========== 10mil SPI Data Bridge Lines ===============|======================||=====>      |
 |  |                                                                              |                      ||            |
 |  |     =========================             ==============================     |                      ||            |
 |  |     *       TECX LOGO       *             *  LASER ENGRAVED TRACKING   *     |                      ||            |
 |  |     * (H:1mm / L:0.15mm Ink) *             *  NUMBER SERIAL/QR ZONE    *     |                      ||            |
 |  |     =========================             ==============================     |                      ||            |
 |  |                                                                              |                      ||            |
-|  |                                      (::: Ground Surface Vias Stitching 1mm :::) |                      ||            |
+|  |                                      (::: Ground Surface Vias Stitching 1mm :::) |                  ||            |
 |  +------------------------------------------------------------------------------+                      ||            |
 |                                                                                                        ||            |
-| ===== [ 5.0mm Bottom Clearance Waste Edge Rail Grip Margin with [*] [Fiducial Dots Alignment Marks] ] ======= |
+| ===== [ 5.0mm Bottom Clearance Waste Edge Rail Grip Margin with [*] [Fiducial Dots Alignment Marks] ] =======        |
 | [ V-SCORE MILLING ENVELOPE AXIS AXIS AXIS AXIS AXIS AXIS AXIS AXIS AXIS AXIS AXIS AXIS AXIS AXIS AXIS ]               |
 +-----------------------------------------------------------------------------------------------------------------------+
   ```
