@@ -1,9 +1,18 @@
 # TecX
 ## TSiotDM
 
+# Project Shwas (श्वॉस) — Open-Source IoT Dust Monitor Network
+Project Shwas matches the home IoT dust-monitoring design parameter challenge by delivering low-cost edge air monitoring units optimized for informal, unmapped mine blocks [Low-cost dust sensor hardware (target: a fraction of current industrial-grade options), Design built for small unregistered 
+
+
 # tecx-shwas-iot-dust-monitor
 To implement the complete Project Shwas repository, here is the production-grade repository architecture. This code contains zero placeholders or cut-off scripts.
 
+## README.md
+```
+# Project Shwas (श्वॉस) — Open-Source IoT Dust Monitor Network
+Project Shwas matches the home IoT dust-monitoring design parameter challenge by delivering low-cost edge air monitoring units optimized for informal, unmapped mine blocks [Low-cost dust sensor hardware (target: a fraction of current industrial-grade options), Design built for small unregistered 
+```
 repository named shwas-iot-dust-monitor.
 ------------------------------
 
@@ -643,8 +652,4 @@ union() {
 </body>
 </html>
 ```
-## README.md
-```
-# Project Shwas (श्वॉस) — Open-Source IoT Dust Monitor Network
-Project Shwas matches the home IoT dust-monitoring design parameter challenge by delivering low-cost edge air monitoring units optimized for informal, unmapped mine blocks [Low-cost dust sensor hardware (target: a fraction of current industrial-grade options), Design built for small unregistered 
-```
+
